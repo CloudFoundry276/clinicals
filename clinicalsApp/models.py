@@ -9,7 +9,7 @@ class Patient(models.Model):
 
 
 class ClinicalData(models.Model):
-    COMPONENT_NAMES = [('hw', 'Height/Weight'), ('bp', 'Blood Pressure'), ('heartrate', 'Heart Rate')]
+    COMPONENT_NAMES = [('hw', 'Height(cm) / Weight(kg)'), ('bp', 'Blood Pressure'), ('heartrate', 'Heart Rate')]
     componentName = models.CharField(choices=COMPONENT_NAMES, max_length=20)
     componentValue = models.CharField(max_length=20)
     measuredDateTime = models.DateTimeField(auto_now_add=True)

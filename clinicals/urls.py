@@ -19,5 +19,6 @@ from clinicalsApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.PatientListView.as_view()),
+    path('', views.PatientListView.as_view(), name='index'),
+    path('create/', views.PatientCreateView.as_view()),
 ]
